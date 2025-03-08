@@ -23,7 +23,7 @@ Click on "New movie". Then, on the movie textbox:
 __CSRF__
 On the name textbox:
 - Try `<a href="https://en.wikipedia.org">Learn</a>` and click in the **Learn** link. The link is active
-- Then try `<script>$.ajax({url: "src/api.php", type: "GET", data: { action: "get_movie", movie_id: 4 } }).done(function(data) { alert(data); } )</script>`. The script retrieves information from the database
+- Then try `<script>fetch('src/api.php?action=get_movie&movie_id=4').then(response=>response.json()).then(data=>alert(data));</script>`. The script retrieves information from the database
 
 Check out `localhost/poll` in the browser, then on the name textbox:
 - Try `<img src="http://localhost/poll?vote=YES">`
