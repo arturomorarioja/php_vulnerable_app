@@ -25,9 +25,12 @@ On the name textbox:
 - Try `<a href="https://en.wikipedia.org">Learn</a>` and click in the **Learn** link. The link is active
 - Then try `<script>fetch('src/api.php?action=get_movie&movie_id=4').then(response=>response.json()).then(data=>alert(data));</script>`. The script retrieves information from the database
 
-Check out `localhost/poll` in the browser, then on the name textbox:
-- Try `<img src="http://localhost/poll?vote=YES">`
-- Now reload `localhost/poll`. The number of votes has increased
+Check out `localhost:8080/poll` in the browser, then on the name textbox:
+- Try `<img src="http://localhost:8080/poll?vote=YES">`
+- Now reload `localhost:8080/poll`. The number of votes has increased
+
+## Usage
+`docker compose up -d`. The application will be available at `http://localhost:8080`.
 
 ## Tools
 MariaDB / PHP8 / JQuery / JavaScript / CSS3 / HTML5
