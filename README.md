@@ -1,8 +1,11 @@
 # Vulnerable web app
 
-## Installation
-1. Run the script movies.sql on localhost. It will create the database **movies** with the tables **movies** and **votes**
-2. Move the folder **poll** to the document root of the web server
+## Usage
+Start the app: `docker compose up -d`. The application will be available at `http://localhost:8080`.
+
+Interact with the database: `docker compose exec db mysql -u root -p` (password `pepe`).
+
+Stop the app: `docker compose down -v`.
 
 ## Operation
 
@@ -28,9 +31,6 @@ On the name textbox:
 Check out `localhost:8080/poll` in the browser, then on the name textbox:
 - Try `<img src="http://localhost:8080/poll?vote=YES">`
 - Now reload `localhost:8080/poll`. The number of votes has increased
-
-## Usage
-`docker compose up -d`. The application will be available at `http://localhost:8080`.
 
 ## Tools
 MariaDB / PHP8 / JQuery / JavaScript / CSS3 / HTML5
